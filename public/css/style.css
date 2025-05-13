@@ -1,0 +1,9 @@
+.banner {
+    background-image: url('/storage/image/banner-elibrary.jpg');
+    background-size: cover; /* Agar gambar menyesuaikan ukuran elemen */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat;
+    height: 89vh;
+    width: 100%;
+    overflow-y: hidden;
+}
