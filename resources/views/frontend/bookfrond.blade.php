@@ -13,19 +13,24 @@
 </head>
 <body class="bg-[#fefae0] text-gray-800">
     <!-- Navbar -->
-  <nav class="bg-blue-900 px-6 py-4 flex justify-between items-center shadow-md">
-    <h1 class="text-2xl font-bold text-white">📚 My E-Library</h1>
-    <ul class="flex space-x-6">
-      <li><a href="/" class="text-white hover:text-yellow-300 transition">Home</a></li>
-      <li><a href="/books" class="text-white hover:text-yellow-300 transition">Books</a></li>
-      <li><a href="/store" class="text-white hover:text-yellow-300 transition">Store</a></li>
-      <li><a href="/contact" class="text-white hover:text-yellow-300 transition">Contact</a></li>
-    </ul>
-    <div class="space-x-3">
-      <a href="/login" class="px-4 py-1 border border-yellow-400 text-yellow-400 rounded hover:bg-yellow-400 hover:text-blue-900 transition">Login</a>
-      <a href="/register" class="px-4 py-1 bg-yellow-400 text-blue-900 font-semibold rounded hover:bg-yellow-300 transition">Register</a>
-    </div>
-  </nav>
+    <nav class="bg-blue-900 px-6 py-4 flex justify-between items-center shadow-md flex-wrap">
+        <h1 class="text-2xl font-bold text-white">📚 My E-Library</h1>
+        <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
+        ☰
+        </button>
+        <div id="menu" class="w-full md:flex md:items-center md:w-auto hidden md:space-x-6 mt-4 md:mt-0">
+        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
+            <li><a href="/" class="text-white hover:text-yellow-300 hover:underline transition">Home</a></li>
+            <li><a href="/books" class="text-white hover:text-yellow-300 hover:underline transition">Books</a></li>
+            <li><a href="/store" class="text-white hover:text-yellow-300 hover:underline transition">Store</a></li>
+            <li><a href="/contact" class="text-white hover:text-yellow-300 hover:underline transition">Contact</a></li>
+        </ul>
+        <div class="space-x-3">
+            <a href="/login" class="px-4 py-1 border border-yellow-400 text-yellow-400 rounded hover:bg-yellow-400 hover:text-blue-900 transition">Login</a>
+            <a href="/register" class="px-4 py-1 bg-yellow-400 text-blue-900 font-semibold rounded hover:bg-yellow-300 transition">Register</a>
+        </div>
+        </div>
+    </nav>
 
     {{-- isi halaman book --}}
     <div class=" p-6 bg-gray-100 min-h-screen">
@@ -50,5 +55,15 @@
             </table>
         </div>
     </div>
+
+    <!-- JavaScript for Navbar Toggle -->
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
